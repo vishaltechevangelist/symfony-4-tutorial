@@ -18,9 +18,6 @@ jobs:
       - run:
           name: Install apt
           command: sudo apt-get install -y zliblg-dev
-#      - run:
-#	  name: Install apt
-#          command: sudo apt-get install -y zliblg-dev 
       - run:
           name: Install PHP MySQL
           command: sudo docker-php-ext-install pdo_mysql
@@ -36,6 +33,6 @@ jobs:
       - run:
           name: Run migrations
           command: php bin/console doctrine:migrations:migrate --env=test --no-interaction
-#      - run:
-#          name: Run tests
-#          command: ./bin/phpunit
+      -run:
+         name: Run tests
+         command: ./bin/phpunit
