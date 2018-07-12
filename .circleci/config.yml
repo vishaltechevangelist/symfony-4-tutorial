@@ -40,7 +40,7 @@ jobs:
     working_directory: ~/micropost
     docker:
       - image: circleci/php:7.2.4-apache-stretch-node-browsers
-	environment:
+        environment:
           APP_ENV: prod
           DATABASE_URL: mysql://root:root@127.0.0.1/micro-post
           MAILER_FROM: micro@micropost.com
@@ -85,3 +85,4 @@ workflows:
           filters:
             branches:
               only: master  
+
